@@ -20,8 +20,10 @@
             "outputPath": "dist/standalonetest",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "preserveSymlinks":true,
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@skyux/packages/polyfills"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -30,9 +32,20 @@
               "src/assets"
             ],
             "styles": [
+              "@skyux/theme/css/sky.css",
+              "@skyux/theme/css/themes/modern/styles.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "@skyux/icons",
+              "autonumeric",
+              "dom-autoscroller",
+              "dragula",
+              "fontfaceobserver",
+              "intl-tel-input",
+              "moment"
+            ]
           },
           "configurations": {
             "production": {
@@ -81,7 +94,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@skyux/packages/polyfills"
             ],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
@@ -90,6 +104,8 @@
               "src/assets"
             ],
             "styles": [
+              "@skyux/theme/css/sky.css",
+              "@skyux/theme/css/themes/modern/styles.css",
               "src/styles.scss"
             ],
             "scripts": []
