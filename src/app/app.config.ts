@@ -7,9 +7,6 @@ import { SkyThemeService } from '@skyux/theme';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
-    importProvidersFrom([
-      //AddinClientService,
-      SkyThemeService
-    ])
+    SkyThemeService
   ]
 };
